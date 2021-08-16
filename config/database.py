@@ -18,4 +18,5 @@ class DatabaseConnection(object):
         return self.cur
     
     def __exit__(self, exc_type, exc_val, exc_tb):
+        self.con.commit()
         self.con.close()

@@ -3,10 +3,10 @@ from fastapi import FastAPI, Depends
 
 from config.settings import Settings, get_settings
 
-from routes import user
+from routes import users
 
 app = FastAPI()
-app.include_router(user.router)
+app.include_router(users.router)
 
 
 @app.get("/")
